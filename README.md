@@ -1,4 +1,4 @@
-# The f-ing final dotfile I'll ever need for my mac
+# (WIP) The f-ing final dotfile I'll ever need for my mac
 
 ### Packages that are installed and use via Brew:
 - Starship
