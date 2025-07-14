@@ -1,0 +1,5 @@
+[user]
+	name = Thomas Quan
+	email = dev.thomasquan@gmail.com
+[core]
+	editor = neovim
