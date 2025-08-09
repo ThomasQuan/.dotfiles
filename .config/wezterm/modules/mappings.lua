@@ -44,14 +44,14 @@ return {
 			action = act.ActivatePaneDirection("Down"),
 		}, -- add new panes
 		{
-			key = "v",
+			key = "/",
 			mods = "LEADER",
 			action = act.SplitVertical({
 				domain = "CurrentPaneDomain",
 			}),
 		},
 		{
-			key = "h",
+			key = "\\",
 			mods = "LEADER",
 			action = act.SplitHorizontal({
 				domain = "CurrentPaneDomain",
@@ -66,15 +66,7 @@ return {
 				action = act.AdjustPaneSize({ "Left", 5 }),
 			},
 			{
-				key = "k",
-				action = act.AdjustPaneSize({ "Left", 5 }),
-			},
-			{
 				key = "RightArrow",
-				action = act.AdjustPaneSize({ "Right", 5 }),
-			},
-			{
-				key = "i",
 				action = act.AdjustPaneSize({ "Right", 5 }),
 			},
 			{
@@ -82,15 +74,7 @@ return {
 				action = act.AdjustPaneSize({ "Up", 2 }),
 			},
 			{
-				key = "e",
-				action = act.AdjustPaneSize({ "Up", 2 }),
-			},
-			{
 				key = "DownArrow",
-				action = act.AdjustPaneSize({ "Down", 2 }),
-			},
-			{
-				key = "n",
 				action = act.AdjustPaneSize({ "Down", 2 }),
 			},
 			{
