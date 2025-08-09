@@ -108,10 +108,8 @@ outer.right = 10
 # See: https://nikitabobko.github.io/AeroSpace/goodness#open-a-new-window-with-applescript
 alt-t = 'exec-and-forget wezterm start'
 
-cmd-h = []     # Disable "hide application"
-cmd-alt-h = [] # Disable "hide others"
-
 alt-f = 'fullscreen'
+
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#layout
 alt-slash = 'layout tiles horizontal vertical'

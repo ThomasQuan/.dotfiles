@@ -94,3 +94,6 @@ eval "$(starship init zsh)"
 # Starting neofetch for sass
 neofetch
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# Created by `pipx` on 2025-07-26 15:47:16
+export PATH="$PATH:/Users/thanhquan/.local/bin"
