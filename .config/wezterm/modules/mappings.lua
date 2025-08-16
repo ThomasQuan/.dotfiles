@@ -24,12 +24,12 @@ return {
 			}),
 		}, -- focus panes
 		{
-			key = "l",
+			key = "h",
 			mods = "LEADER",
 			action = act.ActivatePaneDirection("Left"),
 		},
 		{
-			key = "h",
+			key = "l",
 			mods = "LEADER",
 			action = act.ActivatePaneDirection("Right"),
 		},

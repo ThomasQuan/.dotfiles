@@ -33,9 +33,6 @@ export NVM_DIR="$HOME/.nvm"
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:/Users/falleco/Library/Python/3.9/bin:$HOME/.rvm/bin"
-
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
@@ -86,6 +83,7 @@ export NNN_FCOLORS='c1e2272e006033f7c6d6abc4'
 export NARGO_HOME="$HOME/.nargo"
 export PATH="$PATH:$NARGO_HOME/bin"
 
+export PATH="/opt/homebrew/bin:$PATH"
 
 #export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 
@@ -97,3 +95,8 @@ neofetch
 
 # Created by `pipx` on 2025-07-26 15:47:16
 export PATH="$PATH:/Users/thanhquan/.local/bin"
+
+# Github Automation
+export PATH="$HOME/projects/gh-automation:$PATH"
+alias gh-promo="gh-promo.py"
+
