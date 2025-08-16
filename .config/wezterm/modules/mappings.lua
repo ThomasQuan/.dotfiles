@@ -3,8 +3,8 @@ local act = wezterm.action
 
 return {
 	leader = {
-		key = "Space",
-		mods = "SHIFT",
+		key = "a",
+		mods = "CTRL",
 	},
 
 	keys = {
@@ -24,22 +24,22 @@ return {
 			}),
 		}, -- focus panes
 		{
-			key = "k",
+			key = "l",
 			mods = "LEADER",
 			action = act.ActivatePaneDirection("Left"),
 		},
 		{
-			key = "i",
+			key = "h",
 			mods = "LEADER",
 			action = act.ActivatePaneDirection("Right"),
 		},
 		{
-			key = "e",
+			key = "k",
 			mods = "LEADER",
 			action = act.ActivatePaneDirection("Up"),
 		},
 		{
-			key = "n",
+			key = "j",
 			mods = "LEADER",
 			action = act.ActivatePaneDirection("Down"),
 		}, -- add new panes
