@@ -22,9 +22,9 @@ return {
 	font = wezterm.font("FiraCode Nerd Font Mono", {
 		weight = "Medium",
 	}),
-	font_size = 15,
+	font_size = 16,
 	line_height = 1,
-	window_background_opacity = 0.9,
+	window_background_opacity = 1,
 	-- tab bar
 	use_fancy_tab_bar = false,
 	tab_bar_at_bottom = true,
