@@ -1,12 +1,64 @@
-#!/usr/bin/env lua
+# Update-2024.11.08.16.05
 
--- Determine the configuration directory
-local config_dir = os.getenv("HOME") .. "/.config/sketchybar"
+# Loads all defined icons
+source "$CONFIG_DIR/icons.sh"
+# Loads all defined colors
+source "$CONFIG_DIR/colors.sh"
+# items文件夹可以理解为是UI文件，plugins文件夹可以理解为是脚本文件
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+ITEM_DIR="$CONFIG_DIR/items"
+# Define Font
+FONT="Hack Nerd Font"
 
--- Prepend the configuration directory to the module search paths
-package.path = config_dir .. "/?.lua;" .. config_dir .. "/?/init.lua;" .. package.path
-package.cpath = config_dir .. "/?.so;" .. package.cpath
+bar=(
+    padding_left=0
+    padding_right=0
+    position=top
+    height=30
+    blur_radius=30
+    corner_radius=8
+    margin=12
+    y_offset=2
+    shadow=true
+    color=$BASE
+)
+sketchybar --bar "${bar[@]}"
 
--- Now require the modules
-require("helpers")
-require("init")
+default=(
+    padding_left=2
+    padding_right=2
+    icon.font="$FONT:Bold:14.0"
+    label.font="$FONT:Bold:14.0"
+    icon.color=$WHITE
+    label.color=$WHITE
+    icon.padding_left=2
+    icon.padding_right=2
+    label.padding_left=2
+    label.padding_right=2
+)
+sketchybar --default "${default[@]}"
+
+# -- Left Side Items --
+source "$ITEM_DIR/apple.sh"
+source "$ITEM_DIR/spaces.sh"
+source "$ITEM_DIR/front_app.sh"
+
+# -- Right Side Items -- 
+source "$ITEM_DIR/clock.sh"
+source "$ITEM_DIR/calendar.sh"
+source "$ITEM_DIR/battery.sh"
+source "$ITEM_DIR/network.sh"
+
+source "$ITEM_DIR/sysinfo.sh"
+source "$ITEM_DIR/weather.sh"
+source "$ITEM_DIR/media.sh"
+
+# -- Center Items -- 
+# sketchybar --add item cat center --set cat icon="无人扶我青云志,我自踏雪至山巅" icon.font="$FONT:Bold:12.0" icon.color=$LOVE
+
+# -- Alias Items -- 
+# sketchybar --add alias "Surge,Item-0" right --set "Surge,Item-0" padding_left=0 padding_right=10 label.width=0 update_freq=1
+
+
+sketchybar --update
+echo "sketchybar configuration loaded.."

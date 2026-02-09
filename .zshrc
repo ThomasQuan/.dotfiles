@@ -90,7 +90,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 eval "$(starship init zsh)"
 
 # Starting neofetch for sass
-neofetch
+#neofetch
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Created by `pipx` on 2025-07-26 15:47:16
@@ -100,3 +100,26 @@ export PATH="$PATH:/Users/thanhquan/.local/bin"
 export PATH="$HOME/projects/gh-automation:$PATH"
 alias gh-promo="gh-promo.py"
 
+
+
+# completion styling
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:*' use-fzf-default-opts yes
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'eza -1 --icons -a --group-directories-first --git --color=always $realpath' 
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza -1 --icons -a --group-directories-first --git --color=always $realpath'
+
+
+# aliases
+alias fetch="sh $HOME/.config/fetch.sh"
+
+fetch
+
+
+# bun completions
+[ -s "/Users/thanhquan/.bun/_bun" ] && source "/Users/thanhquan/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
