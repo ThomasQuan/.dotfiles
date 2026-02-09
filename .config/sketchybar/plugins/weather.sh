@@ -3,7 +3,7 @@
 source "$CONFIG_DIR/icons.sh"
 
 # 城市设置
-CITY="ShangHai"
+CITY="Toronto"
 
 # set -x # 调试模式，显示执行的命令
 
