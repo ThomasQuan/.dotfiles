@@ -45,4 +45,10 @@ bar.apply_to_config(c, {
   },
 })
 
+c.colors = c.colors or {}
+
+c.colors.cursor_bg = "#f6c177"
+c.colors.cursor_fg = "#232136"
+c.colors.cursor_border = "#f6c177"
+
 return c
