@@ -17,9 +17,9 @@ c.font_rules = {
     font = wez.font("FiraCode Nerd Font Mono", { weight = "Medium", italic = true }),
   },
 }
-c.font_size = 15
-c.command_palette_font_size = 15
-c.command_palette_rows = 15
+c.font_size = 16
+c.command_palette_font_size = 16
+c.command_palette_rows = 16
 c.adjust_window_size_when_changing_font_size = false
 c.audible_bell = "Disabled"
 c.scrollback_lines = 3000
