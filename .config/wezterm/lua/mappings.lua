@@ -16,7 +16,7 @@ end
 local M = {}
 
 -- CTRL-A as the leader key
-local leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
+local leader = { key = "Space", mods = "CTRL", timeout_milliseconds = 1000 }
 
 local keys = function()
   local keys = {
