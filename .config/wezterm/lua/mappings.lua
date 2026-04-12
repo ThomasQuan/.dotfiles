@@ -15,18 +15,18 @@ end
 
 local M = {}
 
--- CTRL-A as the leader key
-local leader = { key = "Space", mods = "CTRL", timeout_milliseconds = 1000 }
+-- HOME as the leader key
+local leader = { key = "Home", mods = "", timeout_milliseconds = 1000 }
 
 local keys = function()
   local keys = {
-    -- Pane movement using CTRL-A + h/j/k/l
+    -- Pane movement using HOME + h/j/k/l
     keybind({ mod.l }, "h", act.ActivatePaneDirection "Left"),
     keybind({ mod.l }, "j", act.ActivatePaneDirection "Down"),
     keybind({ mod.l }, "k", act.ActivatePaneDirection "Up"),
     keybind({ mod.l }, "l", act.ActivatePaneDirection "Right"),
 
-    -- Split panes using CTRL-A + \ or /
+    -- Split panes using HOME + \ or /
     keybind({ mod.l }, "\\", act.SplitHorizontal { domain = "CurrentPaneDomain" }),
     keybind({ mod.l }, "/", act.SplitVertical { domain = "CurrentPaneDomain" }),
 
@@ -40,7 +40,7 @@ local keys = function()
     -- Close current pane
     keybind({ mod.l }, "x", act.CloseCurrentPane { confirm = true }),
 
-    -- Resize panes with CTRL-A + Shift + H/J/K/L
+    -- Resize panes with HOME + Shift + H/J/K/L
     keybind({ mod.l, mod.s }, "H", act.AdjustPaneSize { "Left", 5 }),
     keybind({ mod.l, mod.s }, "J", act.AdjustPaneSize { "Down", 5 }),
     keybind({ mod.l, mod.s }, "K", act.AdjustPaneSize { "Up", 5 }),
@@ -71,17 +71,6 @@ local keys = function()
     keybind({ mod.c, mod.s }, "c", act.CopyTo "Clipboard"),
     keybind({ mod.c, mod.s }, "v", act.PasteFrom "Clipboard"),
 
-    -- Launch Spotify player as a small pane at the bottom
-    keybind(
-      { mod.l },
-      "s",
-      act.SplitPane {
-        direction = "Down",
-        command = { args = { "spotify_player" } },
-        size = { Cells = 6 },
-      }
-    ),
-
     -- Update all plugins
     keybind(
       { mod.l },
@@ -93,7 +82,7 @@ local keys = function()
     ),
   }
 
-  -- Tab navigation with CTRL-A + 1-9
+  -- Tab navigation with HOME + 1-9
   for i = 1, 9 do
     table.insert(keys, keybind({ mod.l }, tostring(i), act.ActivateTab(i - 1)))
   end
