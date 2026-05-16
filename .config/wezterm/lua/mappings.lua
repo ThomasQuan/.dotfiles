@@ -82,7 +82,7 @@ local keys = function()
     ),
   }
 
-  -- Tab navigation with HOME + 1-9
+  -- Tab navigation with  1-9
   for i = 1, 9 do
     table.insert(keys, keybind({ mod.l }, tostring(i), act.ActivateTab(i - 1)))
   end
