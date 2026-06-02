@@ -37,9 +37,9 @@ c.font_rules = {
     font = wez.font("FiraCode Nerd Font Mono", { weight = "Medium", italic = true }),
   },
 }
-c.font_size = 16
-c.command_palette_font_size = 16
-c.command_palette_rows = 16
+c.font_size = 18
+c.command_palette_font_size = 18
+c.command_palette_rows = 18
 c.adjust_window_size_when_changing_font_size = false
 c.audible_bell = "Disabled"
 c.scrollback_lines = 3000
@@ -54,7 +54,7 @@ mappings.apply_to_config(c)
 
 -- bar
 bar.apply_to_config(c, {
-  position = "top",
+  position = "bottom",
   modules = {
     clock = {
       enabled = false,
