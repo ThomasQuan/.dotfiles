@@ -1,0 +1,309 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "EmptyPane || SharedScreen || vim_operator == none && !VimWaiting && vim_mode != insert",
+    "bindings": {
+      ", f b": "tab_switcher::Toggle",
+      ", f i": "file_finder::Toggle",
+      ", f o": "projects::OpenRecent",
+      ", r l": "task::Rerun",
+      ", r e": ["task::Rerun", { "reevaluate_context": true }],
+      "ctrl-s": "projects::OpenRecent"
+    }
+  },
+  {
+    "context": "Editor && VimControl && !VimWaiting && !menu",
+    "bindings": {
+      "g r": "editor::FindAllReferences",
+      "g a": "editor::ToggleCodeActions",
+      ", g b": "editor::ToggleGitBlame"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "space 9": [
+        "workspace::ActivatePane",
+        8
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "cmd-9": [
+        "workspace::ActivatePane",
+        8
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "space 8": [
+        "workspace::ActivatePane",
+        7
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "cmd-8": [
+        "workspace::ActivatePane",
+        7
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "space 7": [
+        "workspace::ActivatePane",
+        6
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "cmd-7": [
+        "workspace::ActivatePane",
+        6
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "space 6": [
+        "workspace::ActivatePane",
+        5
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "cmd-6": [
+        "workspace::ActivatePane",
+        5
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "space 5": [
+        "workspace::ActivatePane",
+        4
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "cmd-5": [
+        "workspace::ActivatePane",
+        4
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "space 4": [
+        "workspace::ActivatePane",
+        3
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "cmd-4": [
+        "workspace::ActivatePane",
+        3
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "space 3": [
+        "workspace::ActivatePane",
+        2
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "cmd-3": [
+        "workspace::ActivatePane",
+        2
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "space 2": [
+        "workspace::ActivatePane",
+        1
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "cmd-2": [
+        "workspace::ActivatePane",
+        1
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "space 1": [
+        "workspace::ActivatePane",
+        0
+      ]
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "cmd-1": [
+        "workspace::ActivatePane",
+        0
+      ]
+    }
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "bindings": {
+      "home l": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w l": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "bindings": {
+      "home h": "workspace::ActivatePaneLeft"
+    }
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w h": "workspace::ActivatePaneLeft"
+    }
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "bindings": {
+      "home j": "workspace::ActivatePaneDown"
+    }
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w j": "workspace::ActivatePaneDown"
+    }
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "bindings": {
+      "home k": "workspace::ActivatePaneUp"
+    }
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w k": "workspace::ActivatePaneUp"
+    }
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "bindings": {
+      "home shift-h": "workspace::MovePaneLeft"
+    }
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w shift-h": "workspace::MovePaneLeft"
+    }
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "bindings": {
+      "home shift-l": "workspace::MovePaneRight"
+    }
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w shift-l": "workspace::MovePaneRight"
+    }
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "bindings": {
+      "home shift-k": "workspace::MovePaneUp"
+    }
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w shift-k": "workspace::MovePaneUp"
+    }
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "bindings": {
+      "home shift-j": "workspace::MovePaneDown"
+    }
+  },
+  {
+    "context": "(VimControl && !menu) || (!Editor && !Terminal)",
+    "unbind": {
+      "ctrl-w shift-j": "workspace::MovePaneDown"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "cmd-shift-e": "project_panel::ToggleFocus"
+    }
+  },
+
+  // ---- Project / Git / Agent (thread) panel toggles ----
+  // "not editing" = not in Editor, OR in Editor but not insert mode / no pending vim op.
+  {
+    "context": "!Editor || (vim_mode != insert && vim_operator == none && !VimWaiting)",
+    "bindings": {
+      "\\": "project_panel::ToggleFocus",
+      "space g": "git_panel::ToggleFocus",
+      "space t": "agent::ToggleFocus"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "\\": "workspace::ToggleRightDock"
+    }
+  }
+]
