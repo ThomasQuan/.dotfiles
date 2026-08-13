@@ -7,12 +7,24 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "disable_ai": true,
+  "outline_panel": {
+    "dock": "right"
+  },
+  "collaboration_panel": {
+    "dock": "right"
+  },
+  "preview_tabs": {
+    "enable_preview_from_file_finder": true
+  },
   "icon_theme": "Zed (Default)",
   "vim": {
     "toggle_relative_line_numbers": true
   },
   "relative_line_numbers": "enabled",
   "git_panel": {
+    "dock": "right",
+    "file_icons": true,
     "tree_view": true
   },
   "project_panel": {
@@ -25,6 +37,12 @@
     "anthropic_retention": false
   },
   "agent": {
+    "sidebar_side": "right",
+    "default_model": {
+      "provider": "anthropic",
+      "model": "claude-haiku-4-5-20251001",
+      "enable_thinking": true
+    },
     "dock": "right",
     "terminal_init_command": "",
     "favorite_models": [],
@@ -34,6 +52,9 @@
   "vim_mode": true,
   "agent_servers": {
     "cursor": {
+      "default_config_options": {
+        "model": "grok-4.6"
+      },
       "type": "registry"
     }
   },
@@ -43,6 +64,6 @@
   "theme": {
     "mode": "dark",
     "light": "Ayu Light",
-    "dark": "Rosé Pine"
+    "dark": "Duskfox - opaque"
   }
 }
