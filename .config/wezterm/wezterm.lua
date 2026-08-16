@@ -2,26 +2,6 @@ local wez = require "wezterm"
 local appearance = require "lua.appearance"
 local mappings = require "lua.mappings"
 local bar = wez.plugin.require "https://github.com/adriankarlen/bar.wezterm"
-wez.on("gui-startup", function(cmd)
-  local _, _, window = wez.mux.spawn_window(cmd or {})
-
-  -- Active pane starts full; split right (30%) for the side column
-  local left_pane = window:active_pane()
-
-  local right_pane = left_pane:split {
-    direction = "Right",
-    size = 0.30,
-  }
-
-  -- Split the right pane: top 60%, bottom 40%
-  right_pane:split {
-    direction = "Bottom",
-    size = 0.40,
-  }
-
-  -- Focus the left (main) pane
-  left_pane:activate()
-end)
 
 local c = {}
 

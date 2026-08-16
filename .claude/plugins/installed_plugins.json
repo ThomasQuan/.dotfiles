@@ -1,0 +1,52 @@
+{
+  "version": 2,
+  "plugins": {
+    "code-review@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhquan/.claude/plugins/cache/claude-plugins-official/code-review/unknown",
+        "version": "unknown",
+        "installedAt": "2026-08-16T18:24:15.096Z",
+        "lastUpdated": "2026-08-16T18:40:39.156Z"
+      }
+    ],
+    "code-simplifier@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhquan/.claude/plugins/cache/claude-plugins-official/code-simplifier/1.0.0",
+        "version": "1.0.0",
+        "installedAt": "2026-08-16T18:24:33.717Z",
+        "lastUpdated": "2026-08-16T18:24:33.717Z"
+      }
+    ],
+    "figma@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhquan/.claude/plugins/cache/claude-plugins-official/figma/2.2.95",
+        "version": "2.2.95",
+        "installedAt": "2026-08-16T18:26:03.200Z",
+        "lastUpdated": "2026-08-16T18:26:03.200Z",
+        "gitCommitSha": "72fcf1f4b170bcaa78fa8bef2f27cce15f4d58f4"
+      }
+    ],
+    "frontend-design@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhquan/.claude/plugins/cache/claude-plugins-official/frontend-design/unknown",
+        "version": "unknown",
+        "installedAt": "2026-08-16T18:28:30.135Z",
+        "lastUpdated": "2026-08-16T18:40:39.156Z"
+      }
+    ],
+    "shopify-ai-toolkit@claude-plugins-official": [
+      {
+        "scope": "user",
+        "installPath": "/Users/thanhquan/.claude/plugins/cache/claude-plugins-official/shopify-ai-toolkit/1.6.1",
+        "version": "1.6.1",
+        "installedAt": "2026-08-16T18:30:13.310Z",
+        "lastUpdated": "2026-08-16T18:30:13.310Z",
+        "gitCommitSha": "cc5af6505c27939222072449278f6356857cb064"
+      }
+    ]
+  }
+}
