@@ -11,7 +11,6 @@ brew bundle --file=./Brewfile
 
 # Start Services
 echo "Starting Services (grant permissions)..."
-brew services start skhd
 
 # Macos defaults
 echo "Setting MacOS defaults..."
