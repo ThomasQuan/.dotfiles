@@ -14,94 +14,96 @@
       ", f o": "projects::OpenRecent",
       ", r l": "task::Rerun",
       ", r e": ["task::Rerun", { "reevaluate_context": true }],
-      "ctrl-s": "projects::OpenRecent"
-    }
+      "ctrl-s": "projects::OpenRecent",
+    },
   },
   {
     "context": "Editor && VimControl && !VimWaiting && !menu",
     "bindings": {
       "g r": "editor::FindAllReferences",
       "g a": "editor::ToggleCodeActions",
-      ", g b": "editor::ToggleGitBlame"
-    }
+      ", g b": "git::Blame",
+      ", g h": "git::FileHistory",
+      "g /": ["task::Spawn", { "task_name": "wezterm grep" }],
+    },
   },
   {
     "context": "(VimControl && !menu) || (!Editor && !Terminal)",
     "bindings": {
-      "home l": "workspace::ActivatePaneRight"
-    }
+      "home l": "workspace::ActivatePaneRight",
+    },
   },
   {
     "context": "(VimControl && !menu) || (!Editor && !Terminal)",
     "bindings": {
-      "home h": "workspace::ActivatePaneLeft"
-    }
+      "home h": "workspace::ActivatePaneLeft",
+    },
   },
   {
     "context": "(VimControl && !menu) || (!Editor && !Terminal)",
     "bindings": {
-      "home j": "workspace::ActivatePaneDown"
-    }
+      "home j": "workspace::ActivatePaneDown",
+    },
   },
   {
     "context": "(VimControl && !menu) || (!Editor && !Terminal)",
     "bindings": {
-      "home k": "workspace::ActivatePaneUp"
-    }
+      "home k": "workspace::ActivatePaneUp",
+    },
   },
   {
     "context": "(VimControl && !menu) || (!Editor && !Terminal)",
     "bindings": {
-      "home shift-h": "workspace::MovePaneLeft"
-    }
+      "home shift-h": "workspace::MovePaneLeft",
+    },
   },
   {
     "context": "(VimControl && !menu) || (!Editor && !Terminal)",
     "unbind": {
-      "ctrl-w shift-h": "workspace::MovePaneLeft"
-    }
+      "ctrl-w shift-h": "workspace::MovePaneLeft",
+    },
   },
   {
     "context": "(VimControl && !menu) || (!Editor && !Terminal)",
     "bindings": {
-      "home shift-l": "workspace::MovePaneRight"
-    }
+      "home shift-l": "workspace::MovePaneRight",
+    },
   },
   {
     "context": "(VimControl && !menu) || (!Editor && !Terminal)",
     "unbind": {
-      "ctrl-w shift-l": "workspace::MovePaneRight"
-    }
+      "ctrl-w shift-l": "workspace::MovePaneRight",
+    },
   },
   {
     "context": "(VimControl && !menu) || (!Editor && !Terminal)",
     "bindings": {
-      "home shift-k": "workspace::MovePaneUp"
-    }
+      "home shift-k": "workspace::MovePaneUp",
+    },
   },
   {
     "context": "(VimControl && !menu) || (!Editor && !Terminal)",
     "unbind": {
-      "ctrl-w shift-k": "workspace::MovePaneUp"
-    }
+      "ctrl-w shift-k": "workspace::MovePaneUp",
+    },
   },
   {
     "context": "(VimControl && !menu) || (!Editor && !Terminal)",
     "bindings": {
-      "home shift-j": "workspace::MovePaneDown"
-    }
+      "home shift-j": "workspace::MovePaneDown",
+    },
   },
   {
     "context": "(VimControl && !menu) || (!Editor && !Terminal)",
     "unbind": {
-      "ctrl-w shift-j": "workspace::MovePaneDown"
-    }
+      "ctrl-w shift-j": "workspace::MovePaneDown",
+    },
   },
   {
     "context": "Workspace",
     "unbind": {
-      "cmd-shift-e": "project_panel::ToggleFocus"
-    }
+      "cmd-shift-e": "project_panel::ToggleFocus",
+    },
   },
 
   // ---- Project / Git / Agent (thread) panel toggles ----
@@ -110,27 +112,39 @@
     "context": "!Editor || (vim_mode != insert && vim_operator == none && !VimWaiting)",
     "bindings": {
       "\\": "project_panel::ToggleFocus",
-    }
+    },
   },
   {
     "context": "ProjectPanel",
     "bindings": {
-      "\\": "workspace::ToggleRightDock"
-    }
+      "\\": "workspace::ToggleRightDock",
+    },
   },
   {
-      "bindings": {
-        "space w": "workspace::Save"
-      },
-      "context": "vim_mode == normal"
+    "bindings": {
+      "space w": "workspace::Save",
     },
+    "context": "vim_mode == normal",
+  },
 
   // ---- Grep (project search) match navigation ----
   {
     "context": "ProjectSearchBar",
     "bindings": {
       "cmd-[": "search::SelectPreviousMatch",
-      "cmd-]": "search::SelectNextMatch"
-    }
-  }
+      "cmd-]": "search::SelectNextMatch",
+    },
+  },
+  {
+    "unbind": {
+      "shift-escape": "workspace::ToggleZoom",
+    },
+  },
+
+  // ---- Television grep (unified trigger: cmd-shift-f or g /) ----
+  {
+    "bindings": {
+      "cmd-shift-f": ["task::Spawn", { "task_name": "wezterm grep" }],
+    },
+  },
 ]
