@@ -151,7 +151,7 @@
   "theme": {
     "mode": "system",
     "light": "One Light",
-    "dark": "Duskfox - opaque",
+    "dark": "Ayu Dark",
   },
   "language_models": {
     "openai": {

@@ -24,7 +24,7 @@
       "g a": "editor::ToggleCodeActions",
       ", g b": "git::Blame",
       ", g h": "git::FileHistory",
-      "g /": ["task::Spawn", { "task_name": "wezterm grep" }],
+      "g /": ["task::Spawn", { "task_name": "tv grep" }],
     },
   },
   {
@@ -144,7 +144,7 @@
   // ---- Television grep (unified trigger: cmd-shift-f or g /) ----
   {
     "bindings": {
-      "cmd-shift-f": ["task::Spawn", { "task_name": "wezterm grep" }],
+      "cmd-shift-f": ["task::Spawn", { "task_name": "tv grep" }],
     },
   },
 ]

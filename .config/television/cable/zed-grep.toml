@@ -1,0 +1,34 @@
+[metadata]
+name = "zed-grep"
+description = "Live ripgrep search that jumps to the result in Zed"
+requirements = ["rg", "bat", "zed"]
+
+[source]
+command = [
+  { name = "Default", run = "rg . --no-heading --line-number --colors 'match:fg:white' --colors 'path:fg:blue' --color=always" },
+  { name = "Hidden",  run = "rg . --no-heading --line-number --hidden --colors 'match:fg:white' --colors 'path:fg:blue' --color=always" },
+]
+ansi = true
+output = "{strip_ansi|split:\\::..2}"
+
+[preview]
+command = "bat -n --color=always '{strip_ansi|split:\\::0}'"
+env = { BAT_THEME = "ansi" }
+offset = '{strip_ansi|split:\::1}'
+
+[ui]
+preview_panel = { header = '{strip_ansi|split:\::..2}' }
+
+[keybindings]
+enter = "actions:edit"
+# Esc/Ctrl-C normally quit tv; disabled here since this session is meant
+# to persist (see the tmux-backed "tv grep" task) — the only way to end
+# it should be closing the Zed tab.
+esc = "no_op"
+ctrl-c = "no_op"
+
+[actions.edit]
+description = "Open file in Zed at line, keep tv running"
+command = "zed '{strip_ansi|split:\\::0}':'{strip_ansi|split:\\::1}'"
+shell = "bash"
+mode = "fork"

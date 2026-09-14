@@ -60,10 +60,18 @@
     // "hooks": ["create_worktree"]
   },
   {
-    "label": "wezterm grep",
-    "command": "WEZTERM=/Applications/WezTerm.app/Contents/MacOS/wezterm; TAB_ID=$($WEZTERM cli list --format json | /usr/bin/jq -r '.[] | select(.title == \"grep\" or .tab_title == \"grep\") | .tab_id' | /usr/bin/head -1); if [ -n \"$TAB_ID\" ]; then $WEZTERM cli activate-tab --tab-id \"$TAB_ID\"; else PANE_ID=$($WEZTERM cli spawn --cwd \"$ZED_WORKTREE_ROOT\" -- /opt/homebrew/bin/zsh -c 'export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin; /opt/homebrew/bin/tv zed-grep'); $WEZTERM cli set-tab-title --pane-id \"$PANE_ID\" grep; fi; /usr/bin/open -a WezTerm",
-    "shell": { "program": "sh" },
-    "hide": "always",
-    "reveal": "never",
+    "label": "tv grep",
+    "command": "tmux new-session -A -s zed-grep 'tv zed-grep'",
+    "shell": {
+      "with_arguments": {
+        "program": "/opt/homebrew/bin/zsh",
+        "args": ["--login"],
+      },
+    },
+    "use_new_terminal": false,
+    "allow_concurrent_runs": false,
+    "reveal": "always",
+    "reveal_target": "center",
+    "hide": "never",
   },
 ]
